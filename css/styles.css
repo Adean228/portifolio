@@ -62,7 +62,7 @@ body {
 }
 
 .navbar ul li a:hover {
-  color: var(--cor-texto); /* amarelo no hover */
+  color: var(--cor-clara); /* amarelo no hover */
 }
 
 /* fim da navbar */
