@@ -1,0 +1,295 @@
+/* ====================== */
+/*      VARIÁVEIS         */
+/* ====================== */
+:root {
+  --cor-icons: #ffffff;
+  --cor-fundo: #0a0f1c;
+  --cor-texto: #58A6FF;
+  --cor-secundaria: #111827;
+  --cor-branca: #ffffff;
+  --cor-clara: #00ff00;
+  --sombra-neon: 0 0 15px #00eaff;
+  --sombra-card: 0 0 25px #00eaff, 0 0 45px rgba(0, 234, 255, 0.4);
+}
+
+/* ====================== */
+/*      RESET GLOBAL      */
+/* ====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('/img/mundo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  color: var(--cor-branca);
+}
+
+     /* inicio da navbar  */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #111; /* Altere conforme seu design */
+  padding: 10px 20px;
+  height: 70px; /* altura fixa */
+}
+
+.navbar .logo {
+  height: 50px; /* controla o tamanho da imagem */
+  object-fit: contain;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: var(--cor-texto); /* amarelo no hover */
+}
+
+/* fim da navbar */
+
+  /* inicio da home */
+.home-box {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 120px 20px 40px;
+  text-align: center;
+}
+
+.texto-sobreposto h1 {
+  color: var(--cor-texto);
+  font-size: 5rem;
+
+}
+
+.texto-sobreposto h4 {
+  color: var(--cor-texto);
+  font-size: 3rem;
+  margin-bottom: 5px;
+  
+}
+
+.texto-sobreposto p {
+  color: var(--cor-branca);
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+/* fim da home */
+
+
+/* inicio do sobre */
+
+.sobre-section {
+  padding: 60px 20px;
+  width: 80%;
+  max-width: 800px;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.sobre-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--cor-texto);
+}
+
+.sobre-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--cor-branca);
+}
+/* fim do sobre */
+
+/* inicio do CONHECIMENTO */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.titulo-conhecimento {
+  width: 100%;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: var(--cor-texto);
+  
+}
+/* fim do CONHECIMENTO */
+
+/* === CAIXAS COM EFEITO NEON === */
+.card {
+  background-color: rgba(0, 23, 31, 0.85);
+  border: 2px solid #00eaff;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  width: 170px;
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+  cursor: pointer;
+  /* sombra interna (inset) */
+  box-shadow: inset 0 0 25px #00eaff, inset 0 0 60px rgba(0, 234, 255, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #00eaff, 0 0 60px rgba(0, 234, 255, 0.9);
+  border: 2px solid #ffffff;
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--cor-branca);
+  text-shadow: 0 0 10px #00eaff;
+}
+
+.card img {
+  width: 100px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 10px #00eaff);
+}
+
+/*        PROJETOS        */
+
+.projetos-section {
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--cor-texto);
+  background: var(--cor-secundaria);
+}
+
+.projetos-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+
+}
+
+.projetos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.projeto-card {
+  background-color: var(--cor-secundaria);
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s;
+ 
+}
+
+.projeto-card:hover {
+  transform: scale(1.05);
+}
+
+.projeto-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.projeto-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.projeto-card p {
+  font-size: 1rem;
+  color: var(--cor-branca);
+  margin-bottom: 15px;
+}
+
+.projeto-card a {
+  text-decoration: none;
+  color: var(--cor-texto);
+  font-weight: bold;
+  border: 1px solid var(--cor-texto);
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.projeto-card a:hover {
+  background-color: var(--cor-texto);
+  color: #000;
+}
+
+
+/*        CONTATO         */
+
+.contato-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #000;
+  color: var(--cor-texto);
+}
+
+.contato-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contato-section p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  color: var(--cor-branca);
+}
+
+
+
+
+/*    ÍCONES SOCIAIS      */
+
+.icones-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.icones-sociais a {
+  text-decoration: none;
+  color: var(--cor-icons);
+  font-size: 2.8rem;
+  transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+}
+
+.icones-sociais a:hover {
+  transform: scale(1.2);
+  color: var(--cor-clara);
+  text-shadow: 0 0 15px var(--cor-clara);
+}
+
+.icones-sociais i {
+  border: none;
+  background: none;
+  border-radius: 0;
+}
